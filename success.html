@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Order Successful</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <svg
+                width="150"
+                height="40"
+                viewBox="0 0 150 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10H30C35 10 35 20 30 20H15C10 20 10 30 15 30H35"
+                  stroke="#3498db"
+                  stroke-width="3"
+                />
+                <text
+                  x="45"
+                  y="25"
+                  font-family="Poppins"
+                  font-size="18"
+                  font-weight="600"
+                  fill="#333"
+                >
+                  ShopEase
+                </text>
+              </svg>
+            </a>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <!-- <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li> -->
+            </ul>
+          </nav>
+          <div class="header-right">
+            <div class="search-box">
+              <input type="text" placeholder="Search products..." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+              <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+            <div class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Success Section -->
+    <section class="success-section">
+      <div class="container">
+        <div class="success-container">
+          <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h1>Order Successful!</h1>
+          <p class="success-message">
+            Thank you for your purchase. Your order has been successfully
+            placed.
+          </p>
+
+          <div class="order-info">
+            <h2>Order Information</h2>
+            <div class="order-detail">
+              <span>Order Number:</span>
+              <span id="order-number">#12345</span>
+            </div>
+            <div class="order-detail">
+              <span>Order Date:</span>
+              <span id="order-date">July 10, 2023</span>
+            </div>
+            <div class="order-detail">
+              <span>Estimated Delivery:</span>
+              <span id="estimated-delivery">July 15-18, 2023</span>
+            </div>
+            <div class="order-detail">
+              <span>Shipping Address:</span>
+              <span id="shipping-address">123 Main St, Anytown, USA</span>
+            </div>
+            <div class="order-detail">
+              <span>Payment Method:</span>
+              <span id="payment-method">Credit Card (****1234)</span>
+            </div>
+          </div>
+
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-items" id="success-order-items">
+              <!-- Order items will be loaded dynamically -->
+            </div>
+            <div class="order-totals">
+              <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="success-subtotal">$0.00</span>
+              </div>
+              <div class="total-row">
+                <span>Shipping:</span>
+                <span id="success-shipping">$0.00</span>
+              </div>
+              <div class="total-row">
+                <span>Tax:</span>
+                <span id="success-tax">$0.00</span>
+              </div>
+              <div class="total-row">
+                <span>Discount:</span>
+                <span id="success-discount">-$0.00</span>
+              </div>
+              <div class="total-row grand-total">
+                <span>Total:</span>
+                <span id="success-total">$0.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="success-message">
+            <p>
+              A confirmation email has been sent to
+              <span id="customer-email">customer@example.com</span>
+            </p>
+            <p>
+              If you have any questions about your order, please contact our
+              customer support.
+            </p>
+          </div>
+
+          <div class="success-actions">
+            <a href="products.html" class="btn secondary-btn"
+              >Continue Shopping</a
+            >
+            <button class="btn primary-btn" id="print-receipt">
+              Print Receipt
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommended Products -->
+    <section class="recommendation-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>You May Also Like</h2>
+        </div>
+        <div class="products-row" id="recommended-products">
+          <!-- Recommended products will be loaded dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>ShopEase</h3>
+            <p>Your one-stop destination for all your shopping needs.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html?category=clothing">Clothing</a></li>
+              <li>
+                <a href="products.html?category=electronics">Electronics</a>
+              </li>
+              <li><a href="products.html?category=jewelry">Jewelry</a></li>
+              <li><a href="products.html?category=home">Home & Decor</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Main Street, City
+              </li>
+              <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+              <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if coming from checkout
+        if (!localStorage.getItem("orderCompleted")) {
+          window.location.href = "index.html";
+          return;
+        }
+
+        // Load order information
+        displayOrderInformation();
+
+        // Load cart items
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (cart.length === 0) {
+          window.location.href = "index.html";
+          return;
+        }
+
+        displayOrderItems(cart);
+
+        // Get order summary from localStorage
+        const orderSummary = JSON.parse(
+          localStorage.getItem("orderSummary")
+        ) || {
+          subtotal: 0,
+          shipping: 0,
+          tax: 0,
+          discount: 0,
+          total: 0,
+        };
+
+        // Display order summary
+        document.getElementById(
+          "success-subtotal"
+        ).textContent = `$${orderSummary.subtotal.toFixed(2)}`;
+        document.getElementById(
+          "success-shipping"
+        ).textContent = `$${orderSummary.shipping.toFixed(2)}`;
+        document.getElementById(
+          "success-tax"
+        ).textContent = `$${orderSummary.tax.toFixed(2)}`;
+        document.getElementById(
+          "success-discount"
+        ).textContent = `-$${orderSummary.discount.toFixed(2)}`;
+        document.getElementById(
+          "success-total"
+        ).textContent = `$${orderSummary.total.toFixed(2)}`;
+
+        // Clear cart after displaying order
+        localStorage.removeItem("cart");
+
+        // Update cart count
+        updateCartCount();
+
+        // Print receipt
+        document
+          .getElementById("print-receipt")
+          .addEventListener("click", function () {
+            window.print();
+          });
+
+        // Load recommended products
+        loadRecommendedProducts();
+      });
+
+      function displayOrderInformation() {
+        // Generate order number
+        const orderNumber = "#" + Math.floor(Math.random() * 1000000);
+        document.getElementById("order-number").textContent = orderNumber;
+
+        // Set order date (current date)
+        const orderDate = new Date();
+        document.getElementById("order-date").textContent =
+          orderDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+
+        // Set estimated delivery (5-7 days from now)
+        const deliveryStart = new Date(orderDate);
+        deliveryStart.setDate(deliveryStart.getDate() + 5);
+        const deliveryEnd = new Date(orderDate);
+        deliveryEnd.setDate(deliveryEnd.getDate() + 7);
+
+        const deliveryStartStr = deliveryStart.toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+        });
+        const deliveryEndStr = deliveryEnd.toLocaleDateString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
+
+        document.getElementById(
+          "estimated-delivery"
+        ).textContent = `${deliveryStartStr} - ${deliveryEndStr}`;
+
+        // Get shipping address from localStorage
+        const shippingInfo =
+          JSON.parse(localStorage.getItem("shippingInfo")) || {};
+        const shippingAddress = `${shippingInfo.address || "123 Main St"}, ${
+          shippingInfo.city || "Anytown"
+        }, ${shippingInfo.state || "CA"} ${shippingInfo.zip || "12345"}, ${
+          shippingInfo.country || "USA"
+        }`;
+        document.getElementById("shipping-address").textContent =
+          shippingAddress;
+
+        // Get payment method from localStorage
+        const paymentInfo =
+          JSON.parse(localStorage.getItem("paymentInfo")) || {};
+        const paymentMethod = paymentInfo.cardNumber
+          ? `Credit Card (${paymentInfo.cardNumber.slice(-4).padStart(8, "*")})`
+          : "Credit Card (****1234)";
+        document.getElementById("payment-method").textContent = paymentMethod;
+
+        // Get customer email
+        const customerEmail = shippingInfo.email || "customer@example.com";
+        document.getElementById("customer-email").textContent = customerEmail;
+      }
+
+      function displayOrderItems(cart) {
+        const orderItemsContainer = document.getElementById(
+          "success-order-items"
+        );
+        orderItemsContainer.innerHTML = "";
+
+        cart.forEach((item) => {
+          const orderItem = document.createElement("div");
+          orderItem.className = "order-item";
+
+          orderItem.innerHTML = `
+                    <div class="item-image">
+                        <div class="image-placeholder">
+                            <i class="fas ${getCategoryIcon(
+                              item.category
+                            )}"></i>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p class="item-info">
+                            <span class="item-price">$${item.price.toFixed(
+                              2
+                            )}</span>
+                            <span class="item-quantity">Qty: ${
+                              item.quantity
+                            }</span>
+                        </p>
+                    </div>
+                    <div class="item-total">
+                        $${(item.price * item.quantity).toFixed(2)}
+                    </div>
+                `;
+
+          orderItemsContainer.appendChild(orderItem);
+        });
+      }
+
+      function getCategoryIcon(category) {
+        switch (category) {
+          case "clothing":
+            return "fa-tshirt";
+          case "electronics":
+            return "fa-mobile-alt";
+          case "jewelry":
+            return "fa-gem";
+          case "home":
+            return "fa-home";
+          default:
+            return "fa-box";
+        }
+      }
+
+      function updateCartCount() {
+        const cartCountElements = document.querySelectorAll(".cart-count");
+        cartCountElements.forEach((element) => {
+          element.textContent = "0";
+        });
+      }
+
+      function loadRecommendedProducts() {
+        // Get product data
+        const products = JSON.parse(localStorage.getItem("products")) || [];
+        if (products.length === 0) return;
+
+        // Get container
+        const container = document.getElementById("recommended-products");
+
+        // Get random products (4 max)
+        const randomProducts = [];
+        const numProducts = Math.min(4, products.length);
+
+        while (randomProducts.length < numProducts) {
+          const randomIndex = Math.floor(Math.random() * products.length);
+          const product = products[randomIndex];
+
+          if (!randomProducts.some((p) => p.id === product.id)) {
+            randomProducts.push(product);
+          }
+        }
+
+        // Display products
+        randomProducts.forEach((product) => {
+          const productElement = document.createElement("div");
+          productElement.className = "product-card";
+
+          productElement.innerHTML = `
+                    <div class="product-image">
+                        <div class="image-placeholder">
+                            <i class="fas ${getCategoryIcon(
+                              product.category
+                            )}"></i>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-price">
+                            <span class="current-price">$${product.price.toFixed(
+                              2
+                            )}</span>
+                        </div>
+                        <div class="product-rating">
+                            ${getStarRating(product.rating)}
+                            <span class="rating-count">(${
+                              product.reviews || 0
+                            })</span>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <a href="product-details.html?id=${
+                          product.id
+                        }" class="btn secondary-btn">View Details</a>
+                    </div>
+                `;
+
+          container.appendChild(productElement);
+        });
+      }
+
+      function getStarRating(rating) {
+        const fullStars = Math.floor(rating);
+        const halfStar = rating % 1 >= 0.5;
+        const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+        let starsHtml = "";
+
+        // Full stars
+        for (let i = 0; i < fullStars; i++) {
+          starsHtml += '<i class="fas fa-star"></i>';
+        }
+
+        // Half star
+        if (halfStar) {
+          starsHtml += '<i class="fas fa-star-half-alt"></i>';
+        }
+
+        // Empty stars
+        for (let i = 0; i < emptyStars; i++) {
+          starsHtml += '<i class="far fa-star"></i>';
+        }
+
+        return starsHtml;
+      }
+    </script>
+  </body>
+</html>

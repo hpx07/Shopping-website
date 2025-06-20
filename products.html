@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Products</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <svg
+                width="150"
+                height="40"
+                viewBox="0 0 150 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10H30C35 10 35 20 30 20H15C10 20 10 30 15 30H35"
+                  stroke="#3498db"
+                  stroke-width="3"
+                />
+                <text
+                  x="45"
+                  y="25"
+                  font-family="Poppins"
+                  font-size="18"
+                  font-weight="600"
+                  fill="#333"
+                >
+                  ShopEase
+                </text>
+              </svg>
+            </a>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html" class="active">Products</a></li>
+              <!-- <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li> -->
+            </ul>
+          </nav>
+          <div class="header-right">
+            <div class="search-box">
+              <input
+                type="text"
+                placeholder="Search products..."
+                id="search-input"
+              />
+              <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+              <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+            <div class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+      <div class="container">
+        <h1>All Products</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>Products</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-layout">
+          <!-- Filters Sidebar -->
+          <div class="filters-sidebar">
+            <div class="filter-block">
+              <h3>Categories</h3>
+              <ul class="category-filters">
+                <li>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="all"
+                      id="category-all"
+                      checked
+                    />
+                    All Categories
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="clothing" name="category" />
+                    Clothing
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input
+                      type="checkbox"
+                      value="electronics"
+                      name="category"
+                    />
+                    Electronics
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="jewelry" name="category" />
+                    Jewelry
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="home" name="category" /> Home
+                    & Decor
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-block">
+              <h3>Price Range</h3>
+              <div class="price-filter">
+                <div class="price-inputs">
+                  <input
+                    type="number"
+                    id="min-price"
+                    placeholder="Min"
+                    min="0"
+                  />
+                  <span>to</span>
+                  <input
+                    type="number"
+                    id="max-price"
+                    placeholder="Max"
+                    min="0"
+                  />
+                </div>
+                <button id="apply-price" class="btn secondary-btn">
+                  Apply
+                </button>
+              </div>
+            </div>
+            <div class="filter-block">
+              <h3>Rating</h3>
+              <ul class="rating-filters">
+                <li>
+                  <label>
+                    <input type="checkbox" value="4" name="rating" /> 4 Stars &
+                    Up
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="3" name="rating" /> 3 Stars &
+                    Up
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="2" name="rating" /> 2 Stars &
+                    Up
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="1" name="rating" /> 1 Star &
+                    Up
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-block">
+              <h3>Special Offers</h3>
+              <ul class="offer-filters">
+                <li>
+                  <label>
+                    <input type="checkbox" value="sale" id="sale-items" /> On
+                    Sale
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="new" id="new-items" /> New
+                    Arrivals
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button id="clear-filters" class="btn outline-btn">
+              Clear All Filters
+            </button>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="products-grid-container">
+            <div class="products-toolbar">
+              <div class="products-count">
+                <span id="product-count">0</span> Products Found
+              </div>
+              <div class="sort-options">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Rating</option>
+                  <option value="newest">Newest</option>
+                </select>
+              </div>
+              <div class="view-options">
+                <button class="view-btn grid-view active">
+                  <i class="fas fa-th"></i>
+                </button>
+                <button class="view-btn list-view">
+                  <i class="fas fa-list"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="products-grid" id="products-grid">
+              <!-- Products will be loaded dynamically from JS -->
+              <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading products...</p>
+              </div>
+            </div>
+
+            <div class="pagination" id="pagination">
+              <!-- Pagination will be generated by JS -->
+            </div>
+
+            <div class="no-results" id="no-results" style="display: none">
+              <i class="fas fa-search"></i>
+              <h3>No Products Found</h3>
+              <p>
+                We couldn't find any products matching your criteria. Try
+                adjusting your filters.
+              </p>
+              <button id="reset-search" class="btn secondary-btn">
+                Reset Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products recommendation-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>You May Also Like</h2>
+        </div>
+        <div class="products-row" id="recommended-products">
+          <!-- Recommended products will be loaded dynamically from JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>ShopEase</h3>
+            <p>Your one-stop destination for all your shopping needs.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html?category=clothing">Clothing</a></li>
+              <li>
+                <a href="products.html?category=electronics">Electronics</a>
+              </li>
+              <li><a href="products.html?category=jewelry">Jewelry</a></li>
+              <li><a href="products.html?category=home">Home & Decor</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Main Street, City
+              </li>
+              <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+              <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/products.js"></script>
+  </body>
+</html>

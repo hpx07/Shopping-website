@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Product Details</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <svg
+                width="150"
+                height="40"
+                viewBox="0 0 150 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10H30C35 10 35 20 30 20H15C10 20 10 30 15 30H35"
+                  stroke="#3498db"
+                  stroke-width="3"
+                />
+                <text
+                  x="45"
+                  y="25"
+                  font-family="Poppins"
+                  font-size="18"
+                  font-weight="600"
+                  fill="#333"
+                >
+                  ShopEase
+                </text>
+              </svg>
+            </a>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html" class="active">Products</a></li>
+              <!-- <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li> -->
+            </ul>
+          </nav>
+          <div class="header-right">
+            <div class="search-box">
+              <input type="text" placeholder="Search products..." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+              <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+            <div class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <a href="products.html">Products</a> /
+          <span id="product-breadcrumb">Product Name</span>
+        </div>
+
+        <div class="product-details-container" id="product-details">
+          <!-- Product details will be loaded dynamically from JS -->
+          <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading product details...</p>
+          </div>
+        </div>
+
+        <div
+          class="product-not-found"
+          id="product-not-found"
+          style="display: none"
+        >
+          <i class="fas fa-exclamation-circle"></i>
+          <h2>Product Not Found</h2>
+          <p>
+            The product you are looking for does not exist or has been removed.
+          </p>
+          <a href="products.html" class="btn primary-btn">Browse Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Description Tabs -->
+    <section class="product-tabs-section">
+      <div class="container">
+        <div class="product-tabs">
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="description">
+              Description
+            </button>
+            <button class="tab-btn" data-tab="specifications">
+              Specifications
+            </button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+          </div>
+          <div class="tabs-content">
+            <div class="tab-panel active" id="description-tab">
+              <!-- Description content will be loaded dynamically -->
+              <p class="placeholder-text">Loading description...</p>
+            </div>
+            <div class="tab-panel" id="specifications-tab">
+              <!-- Specifications content will be loaded dynamically -->
+              <p class="placeholder-text">Loading specifications...</p>
+            </div>
+            <div class="tab-panel" id="reviews-tab">
+              <div class="reviews-container">
+                <div class="reviews-summary">
+                  <div class="rating-summary">
+                    <div class="average-rating">
+                      <h3>Customer Reviews</h3>
+                      <div class="rating" id="average-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span id="rating-value">4.0</span>
+                      </div>
+                      <p><span id="reviews-count">0</span> reviews</p>
+                    </div>
+                    <div class="rating-bars">
+                      <div class="rating-bar">
+                        <span>5 Stars</span>
+                        <div class="bar-container">
+                          <div
+                            class="bar"
+                            id="five-star-bar"
+                            style="width: 70%"
+                          ></div>
+                        </div>
+                        <span id="five-star-count">0</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>4 Stars</span>
+                        <div class="bar-container">
+                          <div
+                            class="bar"
+                            id="four-star-bar"
+                            style="width: 20%"
+                          ></div>
+                        </div>
+                        <span id="four-star-count">0</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>3 Stars</span>
+                        <div class="bar-container">
+                          <div
+                            class="bar"
+                            id="three-star-bar"
+                            style="width: 5%"
+                          ></div>
+                        </div>
+                        <span id="three-star-count">0</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>2 Stars</span>
+                        <div class="bar-container">
+                          <div
+                            class="bar"
+                            id="two-star-bar"
+                            style="width: 3%"
+                          ></div>
+                        </div>
+                        <span id="two-star-count">0</span>
+                      </div>
+                      <div class="rating-bar">
+                        <span>1 Star</span>
+                        <div class="bar-container">
+                          <div
+                            class="bar"
+                            id="one-star-bar"
+                            style="width: 2%"
+                          ></div>
+                        </div>
+                        <span id="one-star-count">0</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="write-review">
+                    <h3>Write a Review</h3>
+                    <button class="btn secondary-btn" id="write-review-btn">
+                      Write a Review
+                    </button>
+                  </div>
+                </div>
+
+                <div class="review-form" id="review-form" style="display: none">
+                  <h3>Write Your Review</h3>
+                  <form id="review-submission-form">
+                    <div class="form-group">
+                      <label for="reviewer-name">Your Name</label>
+                      <input type="text" id="reviewer-name" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="reviewer-email">Your Email</label>
+                      <input type="email" id="reviewer-email" required />
+                    </div>
+                    <div class="form-group">
+                      <label>Rating</label>
+                      <div class="star-rating">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                      </div>
+                      <input
+                        type="hidden"
+                        id="rating-input"
+                        value="0"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="review-title">Review Title</label>
+                      <input type="text" id="review-title" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="review-content">Your Review</label>
+                      <textarea
+                        id="review-content"
+                        rows="5"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="form-actions">
+                      <button
+                        type="button"
+                        class="btn outline-btn"
+                        id="cancel-review"
+                      >
+                        Cancel
+                      </button>
+                      <button type="submit" class="btn primary-btn">
+                        Submit Review
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="reviews-list" id="reviews-list">
+                  <!-- Reviews will be loaded dynamically -->
+                  <p class="placeholder-text">Loading reviews...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <div class="container">
+        <div class="section-title">
+          <h2>You May Also Like</h2>
+        </div>
+        <div class="products-row" id="related-products">
+          <!-- Related products will be loaded dynamically from JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="recently-viewed">
+      <div class="container">
+        <div class="section-title">
+          <h2>Recently Viewed</h2>
+        </div>
+        <div class="products-row" id="recently-viewed-products">
+          <!-- Recently viewed products will be loaded dynamically from JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>ShopEase</h3>
+            <p>Your one-stop destination for all your shopping needs.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html?category=clothing">Clothing</a></li>
+              <li>
+                <a href="products.html?category=electronics">Electronics</a>
+              </li>
+              <li><a href="products.html?category=jewelry">Jewelry</a></li>
+              <li><a href="products.html?category=home">Home & Decor</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Main Street, City
+              </li>
+              <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+              <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/product-details.js"></script>
+  </body>
+</html>

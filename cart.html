@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase - Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <svg
+                width="150"
+                height="40"
+                viewBox="0 0 150 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 10H30C35 10 35 20 30 20H15C10 20 10 30 15 30H35"
+                  stroke="#3498db"
+                  stroke-width="3"
+                />
+                <text
+                  x="45"
+                  y="25"
+                  font-family="Poppins"
+                  font-size="18"
+                  font-weight="600"
+                  fill="#333"
+                >
+                  ShopEase
+                </text>
+              </svg>
+            </a>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-right">
+            <div class="search-box">
+              <input type="text" placeholder="Search products..." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+              <a href="cart.html" class="active">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </div>
+            <div class="mobile-menu-btn">
+              <i class="fas fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+      <div class="container">
+        <h1>Shopping Cart</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>Cart</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Cart Section -->
+    <section class="cart-section">
+      <div class="container">
+        <div class="cart-container" id="cart-container">
+          <!-- Cart will be loaded dynamically from JS -->
+          <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading cart...</p>
+          </div>
+        </div>
+
+        <div class="empty-cart" id="empty-cart" style="display: none">
+          <div class="empty-cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h2>Your Cart is Empty</h2>
+          <p>Looks like you haven't added any products to your cart yet.</p>
+          <a href="products.html" class="btn primary-btn">Continue Shopping</a>
+        </div>
+
+        <div class="cart-summary" id="cart-summary" style="display: none">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="shipping">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax</span>
+            <span id="tax">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="total">$0.00</span>
+          </div>
+
+          <div class="promo-code">
+            <h4>Promo Code</h4>
+            <div class="promo-input">
+              <input
+                type="text"
+                id="promo-code"
+                placeholder="Enter promo code"
+              />
+              <button id="apply-promo" class="btn secondary-btn">Apply</button>
+            </div>
+            <p id="promo-message"></p>
+          </div>
+
+          <div class="checkout-actions">
+            <a href="products.html" class="continue-shopping">
+              <i class="fas fa-arrow-left"></i> Continue Shopping
+            </a>
+            <a href="checkout.html" class="btn primary-btn checkout-btn"
+              >Proceed to Checkout</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- You May Also Like -->
+    <section class="recommendation-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>You May Also Like</h2>
+        </div>
+        <div class="products-row" id="recommended-products">
+          <!-- Recommended products will be loaded dynamically from JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>ShopEase</h3>
+            <p>Your one-stop destination for all your shopping needs.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html?category=clothing">Clothing</a></li>
+              <li>
+                <a href="products.html?category=electronics">Electronics</a>
+              </li>
+              <li><a href="products.html?category=jewelry">Jewelry</a></li>
+              <li><a href="products.html?category=home">Home & Decor</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Main Street, City
+              </li>
+              <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+              <li><i class="fas fa-envelope"></i> info@shopease.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 ShopEase. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
