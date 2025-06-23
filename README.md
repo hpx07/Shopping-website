@@ -39,41 +39,16 @@ News-website/
 
 ---
 
-## 📸 Screenshots
-
-> *(Store actual images inside a `screenshots/` folder)*
-
-| Homepage | Articles |
-|----------|----------|
-| ![Home](./screenshots/home.png) | ![News](./screenshots/news.png) |
-
----
-
 ## 🚀 Live Demo
 
 > *(Deploy on GitHub Pages and insert your link here)*
 
-🔗 [View Live](#)
-
----
-
-## 📚 Learn More
-
-- [HTML Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE)
+🔗 [View Live](https://hpx07.github.io/Shopping-website/)
 
 ---
 
 ## 🙋 Author
 
 **GitHub:** [@hpx07](https://github.com/hpx07)  
-📧 *Email: (optional)*
 
 ---
