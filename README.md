@@ -41,8 +41,6 @@ News-website/
 
 ## 🚀 Live Demo
 
-> *(Deploy on GitHub Pages and insert your link here)*
-
 🔗 [View Live](https://hpx07.github.io/Shopping-website/)
 
 ---
