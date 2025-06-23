@@ -9,8 +9,8 @@ This project simulates a modern storefront for showcasing products — great for
 
 - 💻 Responsive product grid layout
 - 🎨 Modern CSS styling
-- 🧩 Interactive UI with vanilla JavaScript
-- 🛒 Ideal base for shopping/cart projects
+- 🧩 Interactive UI with JavaScript
+- 🛒 Ideal base for shopping/cart projects/checkout pages/payment pages
 
 ---
 
