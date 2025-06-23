@@ -43,7 +43,7 @@ News-website/
 
 > *(Deploy on GitHub Pages and insert your link here)*
 
-🔗 [View Live](https://hpx07.github.io/Shopping-website/ target="_blank")
+🔗 [View Live](https://hpx07.github.io/Shopping-website/)
 
 ---
 
